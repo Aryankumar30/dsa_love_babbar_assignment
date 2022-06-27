@@ -1,0 +1,34 @@
+#include <iostream>
+#include<map>
+using namespace std;
+
+
+int hasmap_repet(int arr[] , int n){
+     map<int,int> m;
+    for(int i = 0 ; i < n ;i++){
+        int currentelement = arr[i];
+        m[currentelement]++;
+        
+    }
+   
+    for(int i = 0 ; i < n ; i++){
+         int currentelement = arr[i];
+         if(m[currentelement] > 1){
+           return currentelement;
+           
+         }
+    }
+    
+    return -1;
+}
+
+int main()
+{
+    int arr[100] = {3,5,3,4,3,5,6};
+    int n = 7;
+    
+   cout<<hasmap_repet(arr,n);
+
+    return 0;
+
+}
