@@ -1,6 +1,5 @@
 use (no of col * i + j ) to find memory of 2D array in 1D array
 
-
 #include <iostream>
 using namespace std;
 
@@ -73,6 +72,90 @@ int findcolsum(int arr[10][10] , int row , int col){
     return min1;
     
 }
+
+void degree90(int arr[10][10] , int row , int col){
+    
+    
+    
+    
+    
+    
+    
+}
+
+void wave(int arr[10][10] , int row , int col){
+    // 1 2 3 
+    // 4 5 6 
+    // 7 8 9 
+    
+    // 1 2 3 6 5 4 7 8 9 
+    
+    
+    for(int i = 0 ; i < row ; i ++){
+        if(i % 2 == 0 ){
+            for(int j = 0 ; j < col ; j ++){
+                cout<<arr[i][j]<<" ";
+            }
+        }
+        
+        else 
+        {
+            for(int j = col -1 ; j >=0 ; j--){
+                 cout<<arr[i][j]<<" ";
+            }
+        }
+    }
+    
+    
+    
+    
+    
+}
+
+
+
+void spiral(int arr[10][10] , int row , int col ){
+    
+     // 1 2 3 1
+    // 4 5 6 2
+    // 7 8 9 3
+    // 1 4 6 0 
+    
+    // 1 2 3 1 2 3 0 6 4 1 7 4 5 6 9 8 
+    
+   int total = row * col;
+   int i = 0;
+   while(total >= 0 ){
+       
+   
+        for (int j = 0; j < col; j++)
+        { // columb
+            cout << arr[i][j];
+             total --;
+        }
+        row --;
+        
+        for(int i = row ; i )
+       
+   
+       
+       
+       
+       
+       
+       
+       
+      
+   }
+
+    
+    
+}
+
+int total(int row , int col){
+    int c = row * col;
+    return c;
+}
 int main()
 {
     // int arr[3] [3] = {1};
@@ -89,11 +172,13 @@ int main()
     int arr[10][10];
     inputarr(arr, row, col);
     printarr(arr, row, col);
-    int target;
-    cout << "target";
-    cin >> target;
-cout<<findcolsum(arr,row,col);
+    //int target;
+    //cout << "target";
+    //cin >> target;
+    //cout<<findcolsum(arr,row,col);
     //cout << targetarr(arr, row, col, target);
+//wave(arr,row,col);
 
+spiral(arr,row,col,p);
     return 0;
 }
