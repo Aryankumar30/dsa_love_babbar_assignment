@@ -1,0 +1,75 @@
+use (no of col * i + j ) to find memory of 2D array in 1D array
+
+
+#include <iostream>
+
+using namespace std;
+
+void inputarr(int arr[10][10], int row, int col)
+{
+    for (int i = 0; i < row; i++)
+    { // row
+
+        for (int j = 0; j < col; j++)
+        { // columb
+            cin >> arr[i][j];
+        }
+    }
+}
+
+void printarr(int arr[10][10], int row, int col)
+{
+    for (int i = 0; i < row; i++)
+    { // row
+
+        for (int j = 0; j < col; j++)
+        { // columb
+            cout << arr[i][j];
+        }
+        cout << endl;
+    }
+}
+
+int targetarr(int arr[10][10], int row, int col, int target)
+{
+    for (int i = 0; i < row; i++)
+    { // row
+
+        for (int j = 0; j < col; j++)
+        { // columb
+
+            if (target == arr[i][j])
+            {
+
+                return true;
+            }
+        }
+        cout << endl;
+    }
+    return false;
+}
+
+int main()
+{
+    // int arr[3] [3] = {1};
+    // int arr[3] [3] = {0};
+    // int arr[3] [2] = {{1,2} , {4,5} , {3,6}};   // 3 row // 2 col
+    // int arr[3] [2] = {1,2,3,4,5,6};
+
+    int row, col;
+    cout << "No of row - ";
+    cin >> row;
+    cout << "No of col - ";
+    cin >> col;
+
+    int arr[10][10];
+    inputarr(arr, row, col);
+    printarr(arr, row, col);
+    int target;
+    cout << "target";
+    cin >> target;
+
+    cout << targetarr(arr, row, col, target);
+
+    return 0;
+}
