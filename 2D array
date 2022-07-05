@@ -2,7 +2,6 @@ use (no of col * i + j ) to find memory of 2D array in 1D array
 
 
 #include <iostream>
-
 using namespace std;
 
 void inputarr(int arr[10][10], int row, int col)
@@ -49,6 +48,31 @@ int targetarr(int arr[10][10], int row, int col, int target)
     return false;
 }
 
+int findcolsum(int arr[10][10] , int row , int col){
+    int sum = 0 ;
+    int min1 = 0 ;
+     for (int i = 0; i < col; i++)
+    { // row
+
+        for (int j = 0; j < row; j++)
+        { // columb
+
+            sum = sum + arr[j][i];
+        }
+        
+        
+       cout<<sum<<endl;
+       
+       
+       
+       min1 = max(sum , min1);
+        sum = 0 ;
+    }
+    
+    
+    return min1;
+    
+}
 int main()
 {
     // int arr[3] [3] = {1};
@@ -68,8 +92,8 @@ int main()
     int target;
     cout << "target";
     cin >> target;
-
-    cout << targetarr(arr, row, col, target);
+cout<<findcolsum(arr,row,col);
+    //cout << targetarr(arr, row, col, target);
 
     return 0;
 }
