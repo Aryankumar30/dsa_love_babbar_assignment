@@ -124,17 +124,169 @@ void negative(int arr[] , int size){
 }
 
 
-int main()
-{
-    int size = 7;
-    int arr[100];
-    inputarr(arr, size)
-    // swap(arr,5);
-    // reverse(arr, size);
-    negative(arr,size);
-    cout<<palindrome(arr,size);
-    sort012(arr, size);
-    outputarr(arr, size);
-    return 0;
+void unionarra(int arr1[] , int arr2[] , int arr[] , int size1 , int size2  ){
+  
+    int i = 0 , j = 0 , p = 0; 
+    
+    
+    while(i < size1 || j < size2){
+        
+         if(arr1[i] == arr1[i+1]){
+           i++;
+        }
+        
+        else if(arr2[j] == arr2[j+1]){
+          j++;
+        }
+        else if(i >= size1){
+            arr[p] = arr2[j];
+            
+            j++;
+            p++;
+        }
+        
+         else if (j >= size2){
+            arr[p] = arr1[i];
+       
+            i++;
+                p++;
+        }
+        
+        
+        else if(arr1[i] == arr2[j] ){
+            arr[p] = arr1[i];
+         
+            i++;
+            j++;
+                p++;
+        }
+        
+        else if(arr1[i] > arr2[j] ){
+            
+            arr[p] = arr2[j];
+        
+            j++;
+                p++;
+        }
+        
+        
+         else
+         {
+            
+            arr[p] = arr1[i];
+           
+            i++;
+                p++;
+        }
+       
+       
+        
+    }
+    
+    for (int i = 0; i < p; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    
+    
+    
+    
+    
+    
 }
 
+void interarra(int arr1[] , int arr2[] , int arr[] , int size1 , int size2  ){
+  
+    int i = 0 , j = 0 , p = 0; 
+    
+    
+    while(i < size1 || j < size2){
+        
+         if(arr1[i] == arr1[i+1]){
+           i++;
+        }
+        
+        else if(arr2[j] == arr2[j+1]){
+          j++;
+        }
+        
+        else if(i >= size1){
+        
+            
+            j++;
+            
+        }
+        
+         else if (j >= size2){
+           
+       
+            i++;
+            
+        }
+        
+        
+        else if(arr1[i] == arr2[j] ){
+            arr[p] = arr1[i];
+         
+            i++;
+            j++;
+                p++;
+        }
+        
+        else if(arr1[i] > arr2[j] ){
+            
+          
+        
+            j++;
+             
+        }
+        
+        
+         else
+         {
+            
+          
+           
+            i++;
+              
+        }
+       
+       
+        
+    }
+    
+    for (int i = 0; i < p; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    
+    
+    
+    
+    
+    
+}
+
+
+int main()
+{
+    int size1 = 7;
+    int size2 = 5;
+    int arr1[100];
+    int arr2[100];
+    int arr[100];
+    inputarr(arr1, size1);
+   
+    inputarr(arr2, size2);
+    
+    
+    // swap(arr,5);
+    // reverse(arr, size);
+    //negative(arr,size);
+    //cout<<palindrome(arr,size);
+    //sort012(arr, size);
+    //outputarr(arr1, size1);
+    //unionarra(arr1 , arr2 , arr , size1 , size2);
+    interarra(arr1 , arr2 , arr , size1 , size2);
+    return 0;
+}
