@@ -1,5 +1,6 @@
 use (no of col * i + j ) to find memory of 2D array in 1D array
 
+
 #include <iostream>
 using namespace std;
 
@@ -74,12 +75,34 @@ int findcolsum(int arr[10][10] , int row , int col){
 }
 
 void degree90(int arr[10][10] , int row , int col){
-    
-    
-    
-    
-    
-    
+    //transpose
+     cout<<endl;
+     int arr2[10][19];
+     
+     
+     int row2 = 0;
+     int col2 = 0 ;
+     
+     for ( col2 = 0; col2 < col; col2++)
+    { // row
+
+        for ( row2 = 0; row2 < row; row2++)
+        { // columb
+            cout << arr[row2][col2];
+            arr2[col2][row2] = arr[row2][col2];
+        }
+        cout << endl;
+    }
+
+    //reverse
+  
+     cout<<endl;
+     for(int i = 0 ; i<col2;i++){
+         for(int j = row2 -1 ; j>=0;j--){
+              cout << arr2[i][j];
+         }
+          cout << endl;
+     }
     
 }
 
@@ -122,7 +145,7 @@ void spiral(int arr[10][10] , int row , int col ){
     // 1 4 6 0 
     
     // 1 2 3 1 2 3 0 6 4 1 7 4 5 6 9 8 
-    
+    /*
    int total = row * col;
    int i = 0;
    while(total >= 0 ){
@@ -149,7 +172,7 @@ void spiral(int arr[10][10] , int row , int col ){
    }
 
     
-    
+    */
 }
 
 int total(int row , int col){
@@ -178,7 +201,7 @@ int main()
     //cout<<findcolsum(arr,row,col);
     //cout << targetarr(arr, row, col, target);
 //wave(arr,row,col);
-
-spiral(arr,row,col,p);
+degree90(arr,row,col);
+//spiral(arr,row,col,p);
     return 0;
 }
