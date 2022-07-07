@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+#include <algorithm>
 void inputarr(int arr[], int size)
 {
     for (int i = 0; i < size; i++)
@@ -54,8 +54,13 @@ int firstsearch(int arr[] , int size , int target){
     while(start <= end){
         
         if(arr[mid] == target){
+            
+            if(mid == 0 ){
+                return mid;
+            }
            if(arr[mid] == arr[mid -1]){
                end = mid ;
+               
            }
            else
            return mid;
@@ -87,7 +92,15 @@ int lastsearch(int arr[] , int size , int target){
     while(start <= end){
         
         if(arr[mid] == target){
-            return mid;
+             if(mid == size -1 ){
+                return mid;
+            }
+           if(arr[mid] == arr[mid +1]){
+               start = mid ;
+               
+           }
+           else
+           return mid;
         }
         
          if(arr[mid] < target){
@@ -106,6 +119,8 @@ int lastsearch(int arr[] , int size , int target){
     return -1 ;
 }
 
+
+
 int main()
 {
     int arr[100];
@@ -115,12 +130,12 @@ int main()
      inputarr(arr,size);
      cout<<"target";
      cin>>target;
+     //cout<<binary_search(arr, arr + size , target); //stl to find no is present or not but #include <algorithm> needed to added
      
   
-     cout<<firstsearch(arr,size,target);
+     //cout<<lastsearch(arr,size,target);
    
     
     
-
     return 0;
 }
