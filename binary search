@@ -120,6 +120,41 @@ int lastsearch(int arr[] , int size , int target){
 }
 
 
+int fixedpoint(int arr[] , int size){
+    
+    int p = 0 ;
+ 
+    int start = 0 ;
+    int end = size -1;
+    int mid = ( start + end ) / 2;
+ 
+    while(start <= end){
+        
+        if(arr[mid] == mid){
+            
+            
+return mid;
+          
+        }
+        
+         if(arr[mid] < mid){
+            start = mid + 1;
+        }
+        
+        
+         if(arr[mid] > mid){
+           end = mid - 1;
+        }
+        
+        
+          mid = ( start + end ) / 2;
+        
+    }
+    
+
+    return -1;
+    
+}
 
 int main()
 {
@@ -131,7 +166,7 @@ int main()
      cout<<"target";
      cin>>target;
      //cout<<binary_search(arr, arr + size , target); //stl to find no is present or not but #include <algorithm> needed to added
-     
+     cout<<fixedpoint(arr,size);
   
      //cout<<lastsearch(arr,size,target);
    
