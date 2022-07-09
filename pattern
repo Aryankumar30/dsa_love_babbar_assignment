@@ -1,0 +1,343 @@
+#include <iostream>
+
+using namespace std;
+
+/*
+****
+****
+****
+****
+*/
+int main()
+{
+   
+   int n = 4;
+   int m = 4 ;
+   
+   
+   while(n>0){
+       while(m>0){
+       
+       cout<<"*";
+       m--;
+   }
+ 
+        n--;
+          cout<<endl;
+          m = 4;
+   }
+
+    return 0;
+}
+
+--------------------------------
+
+* 
+* * 
+* * *
+* * * * 
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   
+   int row = 0;
+   int col = 0 ;
+   int n = 4;
+   
+   while(row<n){
+       while(col<=row){
+       
+       cout<<"*"<<" ";
+       col++;
+   }
+ 
+        row++;
+          cout<<endl;
+          col = 0;
+   }
+
+    return 0;
+}
+
+
+--------------------------------
+
+* * * * 
+* * * 
+* * 
+* 
+
+
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+   
+   int row = 0;
+   int col = 0 ;
+   int n = 4;
+   
+   while(row<n){
+       while(col< n - row){
+       
+       cout<<"*"<<" ";
+       col++;
+   }
+ 
+        row++;
+          cout<<endl;
+          col = 0;
+   }
+
+    return 0;
+}
+
+-----------------------------
+
+* * * * 
+  * * * 
+    * * 
+      * 
+
+
+
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+   
+   int row = 0;
+   int col = 0 ;
+   int n = 4;
+   
+   
+   
+   while(row<n){
+       
+        while ( col < row){
+               cout<<" "<<" ";
+               col++;
+             
+           }
+           
+       while(col< n){
+       
+      
+       cout<<"*"<<" ";
+      col++;
+   }
+ 
+        row++;
+          cout<<endl;
+          col = 0;
+   }
+
+    return 0;
+}
+
+-----------------------------
+
+      * 
+    * * 
+  * * * 
+* * * * 
+
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+   
+   int row = 0;
+   int col = 0 ;
+   int n = 4;
+   
+   while(row<n){
+       
+          while ( col < n -row -1){
+               cout<<" "<<" ";
+               col++;
+       }
+           col = 0 ;
+           
+       while(col<= row){
+       cout<<"*"<<" ";
+      col++;
+   }
+ 
+        row++;
+          cout<<endl;
+          col = 0;
+   }
+
+    return 0;
+    
+}
+
+-----------------------
+
+//    *   
+//   * * 
+//  * * * 
+// * * * *
+
+
+
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+   
+   int row = 0;
+   int col = 0 ;
+   int n = 4;
+   
+   while(row<n){ 
+       
+       row++;
+       
+       
+       while ( col < n -row ){
+               cout<<" "<<"";
+               col++;
+             
+           }
+           col = 0 ;
+           
+       while(col< row){
+       cout<<" "<<"*"<<"";
+      col++;
+   }
+ 
+      
+          cout<<endl;
+          col = 0;
+   }
+
+    return 0;
+    
+}
+
+---------------------------
+
+
+  * * * *
+   * * *
+    * *
+     *
+
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+   
+   int row = 0;
+   int col = 0 ;
+   int n = 4;
+   
+   while(row<n){ 
+       
+       row++;
+       
+       
+       while ( col <= row - 1 ){
+               cout<<" "<<"";
+               col++;
+             
+           }
+           col = 0 ;
+           
+       while(col<= n - row){
+       cout<<" "<<"*"<<"";
+      col++;
+   }
+ 
+      
+          cout<<endl;
+          col = 0;
+   }
+
+    return 0;
+    
+}
+
+-------------------------------------
+
+
+* * * * * *         
+*       *
+*     *
+*   *
+* *
+* 
+
+
+
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+   
+   int row = 0;
+   int col = 0 ;
+   int n = 6;
+   
+   while(row<n){ 
+            row++;
+            int p = row;
+       if(row == n || row == 1){
+           while(p <= n ){
+           cout<<"*"<<" ";
+          
+           p++;
+       }}
+       
+      else{
+       cout<<"*"<<" ";
+      }
+      
+      
+       while ( col < n - row - 1 ){
+               cout<<" "<<" ";
+               col++;
+             
+           }
+           col = 0 ;
+        
+        if(row != n && row != 1){
+           cout<<"*";
+       }   
+   
+ 
+      
+          cout<<endl;
+          col = 0;
+   }
+
+    return 0;
+    
+}
+
+----------------------------
+
