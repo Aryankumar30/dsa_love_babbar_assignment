@@ -44,6 +44,47 @@ int binarysearch(int arr[] , int size , int target){
     }
     return -1 ;
 }
+void inputarrno(int arr[] , int no){
+    for(int i = 1 ; i <= no ; i++ ){
+        arr[i] = i;
+    }
+}
+int squareroot(int arr[] , int no){
+
+
+      int start = 0 ;
+    int end = no -1;
+    int mid = ( start + end ) / 2;
+ 
+     while(start <= end){
+        
+        if(arr[mid] * arr[mid] == no){
+            
+          
+          
+           return mid;
+        }
+        
+         if(arr[mid]*arr[mid] < no){
+            start = mid + 1;
+        }
+        
+        
+         if(arr[mid] * arr[mid] > no ){
+           end = mid - 1;
+        }
+        
+        
+          mid = ( start + end ) / 2;
+        
+    }
+    
+    return -1;
+    
+    
+    
+}
+
 
 int firstsearch(int arr[] , int size , int target){
     
