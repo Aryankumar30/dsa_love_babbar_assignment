@@ -341,3 +341,60 @@ int main()
 
 ----------------------------
 
+     *
+    * *
+   *   *
+  *     *
+ *       *
+* * * * * * 
+
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+   
+   int row = 0;
+   int col = 0 ;
+   int n = 6;
+   cout<<"     "<<"*"<<endl;
+   while(row<n -2){ 
+       
+       row++;
+       
+       
+       while ( col < n -2 -row ){
+               cout<<" "<<"";
+               col++;
+             
+           }
+           col = 0 ;
+           
+           
+           cout<<" "<<"*"<<"";
+       while(col< row -1){
+           
+           
+       cout<<" "<<""<<" ";
+      col++;
+      
+      
+   }
+ cout<<" "<<"*"<<"";
+      
+          cout<<endl;
+          col = 0;
+   }
+
+int i = 0 ;
+while(i < n){
+    cout<<"*"<<" ";
+    i++;
+}
+    return 0;
+    
+}
+
+--------------------------
