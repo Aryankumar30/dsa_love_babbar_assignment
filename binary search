@@ -297,6 +297,29 @@ int rotatedsearcharray(int arr[] , int size , int target){
     return ans;
 }
 
+
+
+
+double morepresion(int n , int presion , int l ){
+    
+    double fact = 1;
+    double ans = l ;
+    
+    for(int i = 0 ; i<presion ; i++){
+        
+        fact = fact / 10;
+        
+        for(double j = ans ; j*j < n ; j = j + fact){
+            ans = j ;
+        }
+    }
+    
+    return ans;
+    
+}
+
+
+
 int main()
 {
     int arr[100];
@@ -311,7 +334,8 @@ int main()
   cout<<peakinmountain(arr,size);
      //cout<<lastsearch(arr,size,target);
    
-    
+     int l = squareroot(arr,no);
+    cout<<morepresion(no , 3 , l);
     
     return 0;
 }
