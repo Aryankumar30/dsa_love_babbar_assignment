@@ -255,6 +255,48 @@ int pivoit(int arr[] , int size ){
 }
 
 
+int binarysearchrotaded(int arr[] , int start , int end , int target){
+    
+
+    int mid = ( start + end ) / 2;
+    
+    while(start <= end){
+        
+        if(arr[mid] == target){
+            return mid;
+        }
+        
+         if(arr[mid] < target){
+            start = mid + 1;
+        }
+        
+        
+         if(arr[mid] > target){
+           end = mid - 1;
+        }
+        
+        
+          mid = ( start + end ) / 2;
+        
+    }
+    return -1 ;
+}
+
+int rotatedsearcharray(int arr[] , int size , int target){
+  int  p = pivoit(arr,size);
+ 
+    int ans = 0 ;
+    if(arr[p] <= target && target <= arr[size -1 ]){
+       ans = binarysearchrotaded(arr, p , size -1 , target );
+    }
+    else
+    {
+        ans = binarysearchrotaded(arr , 0 , p-1 , target);
+    }
+    
+    return ans;
+}
+
 int main()
 {
     int arr[100];
