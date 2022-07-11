@@ -398,3 +398,35 @@ while(i < n){
 }
 
 --------------------------
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int n = 5 ;
+   int row = 1 ; 
+   int col = 1 ;
+   int i = 0 ;
+   for( row = 1 ;  row <= n ; row++){
+       
+       for(col = 1 ; col <=  n - row  ; col++){
+           cout<<"  ";
+       }
+      
+       for(col = 1 ; col <= row + i ; col++){
+           cout<<"* ";
+         
+       }  i++;
+       cout<<endl;
+      
+   }
+
+    return 0;
+}
+
+//     *
+//   * * *
+// * * * * *
