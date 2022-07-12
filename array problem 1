@@ -289,6 +289,56 @@ void cyclicrotate(int arr[] , int size , int n){
 }
 
 
+
+int minkneed(int arr[] , int size , int k){
+    
+    // cout no of element less than equal to k 
+    int count = 0 ;
+    for(int i = 0 ; i < size ; i ++){
+        if(arr[i] <= k){
+            count++;
+        }
+    }
+    
+    //for first window
+    int bad = 0 ;
+    for( int i = 0 ; i < count ; i ++){
+        if(arr[i] > k){
+            bad++;
+        }
+    }
+    
+    int ans = bad;
+    
+    
+    bad = 0 ;
+    // for rest window 
+    
+    while(count == size){
+        
+        for( int i = 0 ; i < count ; i ++){
+        if(arr[i] > k){
+            bad++;
+        }
+        
+       
+        int ans = min(ans , bad) ;
+        bad = 0 ;
+        i++;
+        count++;
+    }
+    
+    }
+    
+    
+    
+    
+    return ans;
+    
+}
+
+
+
 int main()
 {
     int size1 = 7;
@@ -299,7 +349,7 @@ int main()
     inputarr(arr1, size1);
    
     inputarr(arr2, size2);
-    
+     cout<<minkneed(arr,size,k);
      cyclicrotate(arr,size,n);
     // swap(arr,5);
     // reverse(arr, size);
