@@ -820,9 +820,60 @@ A B C D E D C B A
 
 
 
+#include <iostream>
+
+using namespace std;
 
 
+int main()
+{
+   
+   int row = 0;
+   int col = 0 ;
+   int n = 5;
+   
+   while(row<n){ 
+       
+       row++;
+       
+       
+       while ( col < n -row ){
+               cout<<"*"<<"";
+               col++;
+             
+           }
+           col = 0 ;
+           
+       while(col< row){
+       cout<<"*"<<row<<"";
+      col++;
+   }
+ 
+      col = 0 ;
+       
+       while ( col < n -row + 1 ){ // we added 1 becouse above we printing *1 ,*2 etc.
+               cout<<"*"<<"";
+               col++;
+             
+           }
+      
+      
+          cout<<endl;
+          col = 0;
+   }
 
+    return 0;
+    
+}
+
+*****1*****
+****2*2****
+***3*3*3***
+**4*4*4*4**
+*5*5*5*5*5*
+
+
+--------------------------------------
 
 
 
