@@ -430,3 +430,159 @@ int main()
 //     *
 //   * * *
 // * * * * *
+
+
+
+
+
+
+
+
+--------------
+
+
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+   
+   int row = 0;
+   int col = 0 ;
+   int n = 6;
+   cout<<"      "<<"*"<<endl;
+   while(row<n -1){ 
+       
+       row++;
+       
+       
+       while ( col < n -1 -row ){
+               cout<<" "<<"";
+               col++;
+             
+           }
+           col = 0 ;
+           
+           
+           cout<<" "<<"*"<<"";
+       while(col< row -1){
+           
+           
+       cout<<" "<<""<<" ";
+      col++;
+      
+      
+   }
+ cout<<" "<<"*"<<"";
+      
+          cout<<endl;
+          col = 0;
+   }
+
+
+
+ n = 6 ;
+   
+    for(row = 1 ; row <= n ; row++){
+        
+        
+       
+       
+        for(col = 1 ; col<row  ; col++){
+            cout<<" ";
+        }
+        cout<<" *";
+        
+        for(col = 1 ; col< n - row  ; col++){
+            cout<<"  ";
+        }
+        
+        if(row == n){
+            break;
+        }
+         cout<<" *";
+        
+        cout<<endl;
+    }
+   
+
+
+    return 0;
+    
+}
+
+      *
+     * *
+    *   *
+   *     *
+  *       *
+ *         *
+ *         *
+  *       *
+   *     *
+    *   *
+     * *
+      *
+      
+      
+      
+      ---------------------------
+      
+      
+      
+      #include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n = 5 ;
+    int row = 0 ;
+    int col = 0 ;
+    
+    for(row = 1 ; row <= n ; row++){
+        
+        
+        if(row == 1 ){
+            for(int i = 1 ; i <=n ; i++){
+                cout<<"* ";
+            }
+             row++;
+        cout<<endl;
+        }
+        
+       
+        for(col = 1 ; col<row  ; col++){
+            cout<<" ";
+        }
+        cout<<"*";
+        
+        for(col = 1 ; col< n - row  ; col++){
+            cout<<"  ";
+        }
+        
+        if(row == n){
+            break;
+        }
+         cout<<" *";
+        
+        cout<<endl;
+    }
+   
+
+    return 0;
+}
+
+// * * * * *
+//  *     *
+//   *   *
+//    * *
+//     *
+
+---------------------------
+
+
+
+
