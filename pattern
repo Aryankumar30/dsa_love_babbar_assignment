@@ -876,6 +876,60 @@ int main()
 --------------------------------------
 
 
+#include <iostream>
 
+using namespace std;
+
+int main()
+{
+   
+   int row = 0;
+   int col = 0 ;
+   int n = 4;
+   
+   while(row<n){
+       while(col<=row){
+       
+       cout<<row + 3<<" ";
+       col++;
+   }
+ 
+        row++;
+          cout<<endl;
+          col = 0;
+   }
+   
+   
+   row = 0;
+    col = 0 ;
+   n = n -1 ;
+   
+   while(row<n){
+       while(col< n - row){
+       
+       cout<<n + 2- row<<" ";
+       col++;
+   }
+ 
+        row++;
+          cout<<endl;
+          col = 0;
+   }
+
+
+    return 0;
+}
+
+
+3 
+4 4 
+5 5 5 
+6 6 6 6 
+5 5 5 
+4 4 
+3 
+
+
+-----------------------------
 
 
