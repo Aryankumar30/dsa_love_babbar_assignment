@@ -933,3 +933,98 @@ int main()
 -----------------------------
 
 
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int n = 4 ;
+   int row = 1 ; 
+   int col = 1 ;
+   int i = 0 ;
+   int no = 1 ;
+   int p = 0 ;
+   for( row = 1 ;  row <= n ; row++){
+       
+      cout<<"* ";
+      
+       for(col = 1 ; col <= row + i - 2 ; col++){
+           
+           if(no <= row -1 ){
+                  cout<<no<<" ";
+                  p = no;
+                  no++;
+           }
+           
+           else{
+               p--;
+               cout<<p<<" ";
+           }
+           
+           
+         
+         
+         
+         
+         
+       } 
+       no = 1;
+       i++;
+        if(row == 1){
+             cout<<endl;
+           continue;
+       }
+         cout<<"* ";
+       cout<<endl;
+       
+   }
+    
+   row = 1;
+   col = 1;
+   i = 0 ;
+n = 3;
+no = 1;
+ for( row = 1 ;  row <= n ; row++){
+       
+      cout<<"* ";
+      
+       for(col = 1 ; col <= 2 * n - row - i - 2  ; col++){
+           
+           if(no <= row + 1  ){
+                  cout<<no<<" ";
+                  p = no;
+                  no++;
+           }
+           
+           else{
+               p--;
+               cout<<p<<" ";
+           }
+           
+         
+       } 
+       no = 1;
+       i++;
+      if(row == n){
+             cout<<endl;
+           continue;
+       }
+         cout<<"* ";
+       cout<<endl;
+   }
+ 
+    return 0;
+}
+
+* 
+* 1 * 
+* 1 2 1 * 
+* 1 2 3 2 1 * 
+* 1 2 1 * 
+* 1 * 
+* 
+
+---------------------------------------------------
+
