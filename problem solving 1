@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+// 2 to power or not 
+int main()
+{
+    int n =88;
+    
+    // 6
+    // 6 & 1 
+    int count = 12 ;
+    while(n>0){
+         
+       
+      if(n & 1 == 1){
+          count ++;
+      }
+    n =  n >> 1;
+            
+          
+        }
+        
+    if(count == 1){
+       cout<<"u";
+    }
+   
+
+    return 0;
+}
