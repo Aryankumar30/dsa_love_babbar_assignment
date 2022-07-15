@@ -1028,3 +1028,150 @@ no = 1;
 
 ---------------------------------------------------
 
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   
+   int row = 0;
+   int col = 0 ;
+   int n = 4;
+   
+  for(row = 1 ; row <=n ; row++){
+      for(col =1 ; col<=row ; col++){
+          cout<<"&"<<" ";
+      }
+      
+      for(col = 1 ; col <= n - row ; col++){
+           cout<<" "<<" ";
+      }
+      
+      for(col = 1 ; col <= n-row ; col++){
+           cout<<" "<<" ";
+      }
+      
+      for(col = 1 ; col <= row ; col++){
+           cout<<"&"<<" ";
+      }
+      cout<<endl;
+  }
+  
+  
+  row = 0;
+  col = 0 ;
+  
+  for(row = 1; row <=n ; row++){
+    
+  for(col = 1 ; col <= n - row + 1 ; col++){
+       cout<<"&"<<" ";
+  }  
+  
+  for(col = 1 ; col <= 2 * (row - 1); col++){
+       cout<<" "<<" ";
+  }  
+  
+  for(col = 1 ; col  <= n - row + 1  ; col++){
+       cout<<"&"<<" ";
+  }  
+  
+    cout<<endl;
+    
+    
+}
+    return 0;
+} 
+          
+          
+       
+
+&             & 
+& &         & & 
+& & &     & & & 
+& & & & & & & & 
+& & & & & & & & 
+& & &     & & & 
+& &         & & 
+&             & 
+
+
+---------------------------------
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   
+   int row = 0;
+   int col = 0;
+   int n = 4 ;
+
+ for(row = 1; row <=n ; row++){
+    
+  for(col = 1 ; col <= n - row + 1 ; col++){
+       cout<<"&"<<" ";
+  }  
+  
+  for(col = 1 ; col <= 2 * (row - 1); col++){
+       cout<<" "<<" ";
+  }  
+  
+  for(col = 1 ; col  <= n - row + 1  ; col++){
+       cout<<"&"<<" ";
+  }  
+  
+    cout<<endl;
+    
+   
+
+}
+
+row = 0 ; 
+col = 0 ;
+
+
+for(row = 1 ; row <=n ; row++){
+      for(col =1 ; col<=row ; col++){
+          cout<<"&"<<" ";
+      }
+      
+      for(col = 1 ; col <= n - row ; col++){
+           cout<<" "<<" ";
+      }
+      
+      for(col = 1 ; col <= n-row ; col++){
+           cout<<" "<<" ";
+      }
+      
+      for(col = 1 ; col <= row ; col++){
+           cout<<"&"<<" ";
+      }
+      cout<<endl;
+  }
+  
+
+    return 0;
+}
+
+
+& & & & & & & & 
+& & &     & & & 
+& &         & & 
+&             & 
+&             & 
+& &         & & 
+& & &     & & & 
+& & & & & & & &
+
+
+
+-----------------------------
+
+
+
+
