@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+#include <cstring>
+
+int lengtharr(char name[]){
+    int length = 0 ;
+    int index = 0 ;
+    while(name[index] != '\0'){
+        
+        
+        length++;
+        index++;
+    }
+    return length;
+}
+int main()
+{
+   char name[10] ;
+   char name3[10] ;
+    char name2[10] = "aryan" ;
+   cin>>name;
+  // cout<<name<<"  ";
+  // cout<<name[10]<<endl;
+
+  //cout<<strlen(name)<<endl; //function to find length of char arr but add #include <cstring>
+  //cout<<lengtharr(name);
+
+  //cout<<strcmp(name,name2); // use to compair to char arr contrnt
+  strcpy(name2,name); // copy
+
+  cout<<name2;
+  
+    return 0;
+}
