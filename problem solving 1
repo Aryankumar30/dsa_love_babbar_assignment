@@ -27,3 +27,30 @@ int main()
 
     return 0;
 }
+
+
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+
+int findcompliment(int n){
+    int mask = 0 ;
+    int ans = 0 ;
+    while(mask < n){
+        mask = (mask << 1) | 1;
+        
+         ans = (~n) & mask;
+    }
+    return ans;
+}
+int main()
+{
+    int n =3;
+    
+ cout<<findcompliment(n);
+
+    return 0;
+}
