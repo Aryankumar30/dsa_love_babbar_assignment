@@ -28,7 +28,7 @@ int main()
 #include <iostream>
 
 using namespace std;
-// bubble sort
+// bubble sort we can add break statent wgen no swap happen at first to make best case o(n)
 int main()
 {
     int arr[10] = {1, 6, 2, 9, 4, 0, -3};
@@ -54,3 +54,6 @@ int main()
     }
     return 0;
 }
+
+
+------------------------------
