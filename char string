@@ -14,6 +14,19 @@ int lengtharr(char name[]){
     }
     return length;
 }
+
+void reverse(char arr[] , int n ){
+    int s = 0 ; int e = n -1 ;
+    
+    while(s<=e){
+       int temp = arr[s];
+       arr[s] = arr[e];
+        arr[e] = temp;
+        
+        s++;
+        e--;
+    }
+}
 int main()
 {
    char name[10] ;
@@ -27,9 +40,10 @@ int main()
   //cout<<lengtharr(name);
 
   //cout<<strcmp(name,name2); // use to compair to char arr contrnt
-  strcpy(name2,name); // copy
-
+  //strcpy(name2,name); // copy
+reverse(name2,5);
   cout<<name2;
+  
   
     return 0;
 }
