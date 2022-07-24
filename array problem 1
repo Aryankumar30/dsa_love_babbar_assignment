@@ -338,6 +338,37 @@ int minkneed(int arr[] , int size , int k){
 }
 
 
+void twosum(int arr[] , int size , int target){
+    
+    int start = 0 ; 
+    int end = size -1;
+   
+    for(int i = 0 ; start < end ; i++ ){
+        
+        if(arr[start] + arr[end] == target){
+            cout<<"pair is - "<<arr[start]<<" + "<<arr[end]<<" = "<<target<<endl;
+            start++;
+            end--;
+        }
+        
+         if(arr[start] + arr[end] < target){
+           start++;
+        }
+        
+         if(arr[start] + arr[end] > target){
+            end--;
+        }
+    }
+    
+}
+
+void threesum(int arr[] , int size , int target){
+    
+    for(int i = 0 ; i < size ; i ++){
+        int p = target - arr[i];
+        twosum(arr,size,p);
+    }
+}
 
 int main()
 {
