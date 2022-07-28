@@ -392,3 +392,66 @@ int main()
     interarra(arr1 , arr2 , arr , size1 , size2);
     return 0;
 }
+
+
+
+------------------------
+
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main()
+{
+    int arr[] = {-2, -3, 4, -1, 100, 1, 5, -3};
+    int size = 8;
+    int int_result = -44;
+    // brute force 
+ /*   int sum = 0 ;
+    for(int i = 0 ; i < size ; i++){
+        for(int j = i ; j<size;j++){
+            sum = sum + arr[j];
+         
+          int_result = max(int_result, sum);
+        }
+        
+        sum = 0 ;
+     
+        
+    }
+cout<<int_result;
+*/
+// Kadane’s Algorithm
+
+int sum = 0  , p = 0 , k = 0;
+
+        for(int j = 0 ; j<size;j++){
+           
+            sum = sum + arr[j];
+         
+         if(int_result < sum){
+          int_result = max(int_result, sum);
+         p = j;
+      
+         }
+          if(sum<0){
+            
+              sum = 0 ;
+               k = j + 1;
+          }
+          
+        }
+        
+        cout<<int_result<<" "<<arr[k]<<" "<<arr[p];
+
+
+    return 0;
+}
+
+
+
+------------------------
+
+
