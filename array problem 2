@@ -41,6 +41,8 @@ int hasmap_repet(int arr[] , int n){
     return -1;
 }
 
+
+
 int main()
 {
     int arr[100] = {3,5,3,4,3,5,6};
@@ -51,3 +53,123 @@ int main()
     return 0;
 
 }
+
+
+-----------------------
+
+// 3 intrersete 
+
+#include <iostream>
+
+using namespace std;
+
+int interarra(int arr1[] , int arr2[] , int arr[] , int size1 , int size2  ){
+  
+    int i = 0 , j = 0 , p = 0; 
+    int count = 0 ;
+    
+    while(i < size1 || j < size2){
+        
+         if(arr1[i] == arr1[i+1]){
+           i++;
+        }
+        
+        else if(arr2[j] == arr2[j+1]){
+          j++;
+        }
+        
+        else if(i >= size1){
+        
+            
+            j++;
+            
+        }
+        
+         else if (j >= size2){
+           
+       
+            i++;
+            
+        }
+        
+        
+        else if(arr1[i] == arr2[j] ){
+            arr[p] = arr1[i];
+         count++;
+            i++;
+            j++;
+                p++;
+        }
+        
+        else if(arr1[i] > arr2[j] ){
+            
+          
+        
+            j++;
+             
+        }
+        
+        
+         else
+         {
+            
+          
+           
+            i++;
+              
+        }
+       
+       
+        
+    }
+    
+  
+    
+  return count;  
+    
+    
+    
+}
+void inputarr(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cin >> arr[i];
+    }
+}
+
+void outputarr(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
+
+
+
+int main()
+{
+   int arr1[10];
+   int arr2[10];
+   int arr3[10];
+   int ans [10];
+   int realans[10];
+   int a = 5 , b= 6 , c = 7;
+   
+   inputarr(arr1,a);
+   cout<<"next";
+    inputarr(arr2,b);
+     cout<<"next";
+     inputarr(arr3,c);
+     
+    int p = interarra(arr1,arr2,ans,a,b);
+     
+int k = interarra(ans,arr3,realans,p,c);
+    
+     cout<<"next";
+outputarr(realans,k);
+    return 0;
+}
+
+---------------------
