@@ -1,0 +1,26 @@
+//pointers 
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a = 5;
+    int *p = &a;
+    
+    /*
+    cout<<p<<endl;  // 100 which is addresh of a
+    cout<<*p<<endl; // * IS DEREFRENCE OPERATOR it return the value of main value pf pointer which is 5 here
+    cout<<&p<<endl; // 96 which is addresh of p
+    cout<<a<<endl;  // 5
+    cout<<&a<<endl; // 100 which is addresh of a
+    cout<<*a<<endl; // error
+    
+    cout<<sizeof(p);
+*/
+
+int()
+    return 0;
+}
+
