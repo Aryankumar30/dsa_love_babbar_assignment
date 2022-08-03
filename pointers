@@ -4,11 +4,21 @@
 
 using namespace std;
 
+
+void func(int *p , int k){
+    *p = *p + 1;
+    k = k + 1;
+    
+}
+
 int main()
 {
     int a = 5;
     int *p = &a;
-    
+    int k = 8 ;
+    cout<<p<<endl;  // 100 which is addresh of a
+    cout<<*p<<endl; // * 
+    cout<<k<<endl;
     /*
     cout<<p<<endl;  // 100 which is addresh of a
     cout<<*p<<endl; // * IS DEREFRENCE OPERATOR it return the value of main value pf pointer which is 5 here
@@ -20,7 +30,13 @@ int main()
     cout<<sizeof(p);
 */
 
-int()
+func(p,k);
+cout<<p<<endl;  // 100 which is addresh of a
+    cout<<*p<<endl; // * 
+    cout<<k<<endl;
     return 0;
 }
+
+
+
 
