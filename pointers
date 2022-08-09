@@ -1,5 +1,3 @@
-//pointers 
-
 #include <iostream>
 
 using namespace std;
@@ -11,14 +9,18 @@ void func(int *p , int k){
     
 }
 
+//void dummy(int arr[] , int n){
+ //   cout<<sizeof(arr)<<endl;  // pointer has 4 bit sizw
+//}
+
 int main()
 {
     int a = 5;
-    int *p = &a;
+   // int *p = &a;
     int k = 8 ;
-    cout<<p<<endl;  // 100 which is addresh of a
-    cout<<*p<<endl; // * 
-    cout<<k<<endl;
+  //  cout<<p<<endl;  // 100 which is addresh of a
+ //   cout<<*p<<endl; // * 
+  //  cout<<k<<endl;
     /*
     cout<<p<<endl;  // 100 which is addresh of a
     cout<<*p<<endl; // * IS DEREFRENCE OPERATOR it return the value of main value pf pointer which is 5 here
@@ -30,15 +32,15 @@ int main()
     cout<<sizeof(p);
 */
 
-func(p,k);
-cout<<p<<endl;  // 100 which is addresh of a
-    cout<<*p<<endl; // * 
-    cout<<k<<endl;
+//func(p,k);
+//cout<<p<<endl;  // 100 which is addresh of a
+   // cout<<*p<<endl; // * 6
+  //  cout<<k<<endl;
     
     
       int arr[] = {1,2,3,4,5};
-    
-    cout<<arr<<endl;
+   /* 
+    cout<<arr<<endl; // addresh of base arr[0] self reference
     cout<<&arr<<endl; //  addresh of arrsy is arr[0]
     cout<<*arr<<endl;
      cout<<arr[0]<<endl;
@@ -50,11 +52,22 @@ cout<<p<<endl;  // 100 which is addresh of a
        int i = 2;
        cout<<i[arr]<<endl; // strange na 
        
-       
-       
+    */
+    //dummy(arr, 5);
+    //  cout<<sizeof(arr)<<endl; // 1 int has 4 bit sizw
+      
+      
+      //char pointer
+      
+      char ch = 'A';
+      char *p = &ch;
+      cout<<*p<<endl;
+        cout<<p<<endl; 
+        
+      char cha[] = "abcd";
+      cout<<*cha<<endl;
+      cout<<cha<<endl; // entire string print here which is dif from int . it run till it fint nul char
     return 0;
 }
-
-
 
 
