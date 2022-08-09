@@ -67,6 +67,17 @@ int main()
       char cha[] = "abcd";
       cout<<*cha<<endl;
       cout<<cha<<endl; // entire string print here which is dif from int . it run till it fint nul char
+      
+      
+      
+       cout<<"--------";
+      char st[] = " my name is aryan";
+      char *ptr = &st;
+      
+      cout<<ptr<<endl;  // all string
+      cout<<*ptr<<endl; //m
+      cout<<&ptr<<endl; // addresh
+      
     return 0;
 }
 
