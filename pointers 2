@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a = 5;
+    
+    int *p = &a;
+    
+    int **q = &p; // double pointer 
+    
+    int ***r = &q; // triple pointer 
+    
+    cout<<a<<endl;
+     cout<<&a<<endl;
+     // cout<<*a<<endl; yaha error aaye ga 
+     
+      cout<<&p<<endl;
+      cout<<p<<endl;
+      cout<<*p<<endl;
+    
+    cout<<&q<<endl;
+    cout<<q<<endl;
+    cout<<*q<<endl;
+    cout<<**q<<endl;
+
+    return 0;
+}
