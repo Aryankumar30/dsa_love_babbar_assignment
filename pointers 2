@@ -2,6 +2,19 @@
 
 using namespace std;
 
+
+void func1(int** q) {
+    q = q+1;
+}
+
+void func2(int** q) {
+    *q = *q+1;
+}
+
+void func3(int** q) {
+    **q = **q+1;
+}
+
 int main()
 {
     int a = 5;
@@ -24,6 +37,22 @@ int main()
     cout<<q<<endl;
     cout<<*q<<endl;
     cout<<**q<<endl;
+
+
+cout << "before " << p  << endl;
+cout << "after " << q << endl;
+    cout << "after " << *q << endl;
+     cout << "after " << **q << endl;
+     
+    func3(q);
+func1(q);
+func2(q);
+    
+
+    cout << "before " << q << endl;
+     cout << "before " << *q << endl;
+    cout << "before " << **q << endl;
+
 
     return 0;
 }
