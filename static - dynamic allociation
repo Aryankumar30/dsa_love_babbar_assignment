@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+
+// reference variable - diff name same variable
+
+int main()
+{
+   int a = 21;
+   int & b = a; // creating refrenece variable
+ 
+   a++;
+   b++;
+   cout<<b<<endl<<a<<endl;
+   
+   
+   // why we need refrenece variable 
+   
+
+    return 0;
+}
