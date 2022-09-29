@@ -4,6 +4,11 @@ using namespace std;
 
 // reference variable - diff name same variable
 
+int fun(int &p){
+    p = p + 1;
+    
+    return p ;
+}
 int main()
 {
    int a = 21;
@@ -11,11 +16,27 @@ int main()
  
    a++;
    b++;
+   
+   cout<<fun(b);
    cout<<b<<endl<<a<<endl;
    
    
    // why we need refrenece variable 
+   // memory ni leta function me pass by refrenece
    
-
+   
+   // int arr[n] - this is a bad way to declear array becouse here he are use static memory allocation
+   
+   // int * arr = new int [n]; way to dynamic allocate memory 
+   //  static      dynamic 
+   
+  // how to delete dynamic memory to save memory leakage ??
+  
+  // delete * ptr ;
+  // delete [] arr;
+  
+  
+  
+ 
     return 0;
 }
