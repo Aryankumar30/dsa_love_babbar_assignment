@@ -8,4 +8,10 @@ Mandatoy condition for recurssion - 1. base case
  2. Recursive call/ Recursive Relation - same sunction jo call liya
  
  
-                                     
+ A recursion include base case , processing (kuch kuch code ) , Recursive call
+                  
+  Types of Recursion -
+  
+  1. Tail Recursion - if Recursion call is at end
+  2. Head Recursion - if Recursion call is above prossing part 
+
