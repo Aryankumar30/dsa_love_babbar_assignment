@@ -56,3 +56,16 @@ func2(q);
 
     return 0;
 }
+
+
+-------------------------
+
+
+void pointer - 
+
+1. no datatype
+2. kisi bhi type ka data ko point kra skta hu 
+3. cant be defrence - nhi pta kitna bite lena hao
+4. no arthemtic 
+
+
