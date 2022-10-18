@@ -78,3 +78,39 @@ macro function - define wala
 3.
 4.
 5.
+
+---------------------------------------------------------------
+
+// refrenece variable me hum jisko dege ehi change kr paye ga variable ka value bss , globel me koi bhi kr deta hai
+#include <iostream>
+
+using namespace std;
+int sum2(int sum){
+    sum = sum + 10 ;
+  return sum;
+}
+int sum1(int &sum){
+    cout<<sum<<"sum";
+    sum = sum + 10 ;
+   return sum;
+}
+
+
+
+int sum3(int &sum){
+    sum = sum + 10 ;
+   return sum;
+}
+int main()
+{
+   int a = 4;
+   int &b = a;
+   
+   
+   cout<<sum2(a)<<endl;
+    cout<<sum1(a)<<endl;
+    cout<<sum3(a);
+   
+
+    return 0;
+}
