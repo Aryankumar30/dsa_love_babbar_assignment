@@ -114,3 +114,39 @@ int main()
 
     return 0;
 }
+
+------------
+
+default aggument - default value of parameter .
+it goes right to left
+
+right way 
+
+#include <iostream>
+using namespace std;
+int sum(int a  , int b , int c = 9){
+    int ans = a+ b +c;
+    return ans;
+}
+int main()
+{
+    cout<<sum(2,3);
+    return 0;
+}
+
+wrong way
+
+
+#include <iostream>
+using namespace std;
+int sum(int a = 9 , int b , int c ){
+    int ans = a+ b +c;
+    return ans;
+}
+int main()
+{
+    cout<<sum(2,3);
+    return 0;
+}
+
+-------------------
