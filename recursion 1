@@ -15,3 +15,28 @@ Mandatoy condition for recurssion - 1. base case
   1. Tail Recursion - if Recursion call is at end
   2. Head Recursion - if Recursion call is above prossing part 
 
+----------------------------------
+
+
+#include <iostream>
+
+using namespace std;
+
+void no(int n){
+   if(n <= 0 ){
+       return ;
+   } 
+   
+  
+   no(n-1);  // output - 1 2 3 4 5
+    cout<<n;
+ // no(n-1);  // output - 5 4 3 2 1 // look here carefully 
+}
+int main()
+{
+   int n = 5 ;
+   
+no(n);
+
+    return 0;
+}
