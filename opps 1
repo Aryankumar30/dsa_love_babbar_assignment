@@ -171,3 +171,64 @@ notes
    this->gender = b; // means this use for this object ke liye
 ----------------
 
+destructor  ~
+
+
+
+#include <iostream>
+
+using namespace std;
+
+class human {
+  
+ char gender ;
+    int age;
+   
+  public:
+  human(int a , char b){ // parameterise constructor
+   cout<<"parameterise constructor"<<endl;
+      this->age = a;
+      this->gender = b; // means this use for this object ke liye
+  }
+ 
+   
+  human (){     // defalt
+  
+      cout<<"defalt"<<endl;
+      cin>>age>>gender;
+      
+  }
+  human(human &a){ // copy constructor
+   cout<<"copy"<<endl;
+      age = a.age ;
+      gender = a.gender;
+  }
+  
+  void display(){
+      cout<<age<<endl<<gender;
+  }
+  
+  ~ human(){ // destructor but only for static memory , dynamic ke liye manuly krana pade ga ex - delete obj;
+      cout<<"destructor called for each object"; // use to free memory
+  }
+};
+
+
+int main()
+{
+   human obj(12,'s');
+   obj.display();
+ human obj2(obj);
+ obj2.display();
+human obj3;
+
+ 
+  obj3.display();
+
+  
+
+    return 0;
+}
+------------------------
+
+
