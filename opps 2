@@ -1,1 +1,37 @@
-.
+Encapculation - wraping up data into single unit 
+security badhata hai 
+
+1. reuseablity 
+2. 
+3 .
+
+-------------
+
+#include <iostream>
+
+using namespace std;
+class human{
+    int age ;
+    public:
+   void setage(int a){
+        age = a;
+    }
+    
+    int getage(){
+       
+       return age;
+    }
+};
+int main()
+{
+    human n;
+    n.setage(1);
+    cout<<n.getage();
+
+    return 0;
+}
+------------
+inheritance - parent class se property lena 
+
+
+
