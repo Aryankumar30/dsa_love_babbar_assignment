@@ -1,0 +1,31 @@
+private - acces only in class (use get data set data);
+public - acess anywhere 
+
+
+puclic 
+
+
+#include <iostream>
+
+using namespace std;
+
+class human {
+  
+ char gender ;
+    int age;
+    
+   
+};
+int main()
+{
+   human obj;
+   
+   obj.gender = 'g';
+   obj.age = 6;
+   cout<<obj.age;
+  
+
+    return 0;
+}
+
+private - 
