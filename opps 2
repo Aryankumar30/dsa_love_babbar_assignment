@@ -33,5 +33,77 @@ int main()
 ------------
 inheritance - parent class se property lena 
 
+chart sheet 
+            public      private     protected 
+public -    public      private     protected 
+private-    private     private     private 
+protected-  protected   private     protected 
 
 
+types of inhetrance 
+
+1. single inhetrance
+
+#include <iostream>
+
+using namespace std;
+
+class human{
+    public:
+    int age;
+    
+};
+
+class student : public human{
+    
+};
+int main()
+{
+  student p;
+  p.age = 8;
+  
+  cout<<p.age;
+
+    return 0;
+}
+
+2. multilevel
+
+#include <iostream>
+
+using namespace std;
+
+class human{
+    public:
+    int age;
+    
+};
+
+class student : public human{
+    public:
+    string name ;
+};
+
+class aryan : public student{
+    
+};
+int main()
+{
+  student p;
+  p.age = 8;
+  
+  cout<<p.age;
+
+aryan a;
+a.age = 20;
+a.name = "ankish";
+
+cout<<a.age<<" "<<a.name;
+    return 0;
+}
+
+3. Multiple inheritance.
+
+4.Hierarchical Inheritance
+
+5. Hybrid Inheritance.
