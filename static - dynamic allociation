@@ -35,6 +35,26 @@ int main()
   // delete * ptr ;
   // delete [] arr;
   
+  //void pointer - points to any type 
+  
+  
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int a = 10;
+	char b = 'x';
+	
+	void* p = &a; // void pointer holds address of int 'a'
+    cout<<*(int*)p;
+	p = &b; // void pointer holds address of char 'b'
+	cout<<*(char*)p;
+
+}
+
+// This code is contributed by sarajadhav12052009
+
   
   
   // -----------------------------------------creating 2d array -----------------------
