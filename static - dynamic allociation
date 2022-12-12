@@ -171,3 +171,6 @@ int main()
 }
 
 -------------------
+
+
+Read about inline function - basically time save krte hai hum 1 line wale function ke liye . just like macro it work .
