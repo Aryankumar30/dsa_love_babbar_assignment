@@ -81,4 +81,5 @@ int main()
     return 0;
 }
 
+// Dangling point - int *ptr; - bad 
 
