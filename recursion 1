@@ -40,3 +40,38 @@ no(n);
 
     return 0;
 }
+
+------------------------------------------
+
+// search
+
+#include <iostream>
+
+using namespace std;
+
+int search(int n , int k , int arr[],int i){
+   
+    // base case 
+    if(i>= n){
+        return -1;
+    }
+    
+    if(k == arr[i]){
+        
+        return i;
+    }
+        i++;
+    // recurssion 
+   return search(n,k,arr,i);
+    
+   
+}
+int main()
+{
+  int n = 5;
+ int arr[5] = {5,9,2,0,1};
+int k = 90;
+cout<<search(5,k,arr,0);
+    return 0;
+}
+
