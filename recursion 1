@@ -75,3 +75,35 @@ cout<<search(5,k,arr,0);
     return 0;
 }
 
+-------------------------------------
+
+//max
+
+#include <iostream>
+
+using namespace std;
+
+int maxx(int n , int max , int arr[]){
+   n--;
+    // base case 
+   if(n<0){
+    
+       return max ;
+   }
+    // recurssion 
+  if(arr[n]>max){
+      max = arr[n];
+  }
+
+ return maxx(n,max,arr);
+  
+   
+}
+int main()
+{
+  int n = 5;
+ int arr[5] = {590876,9,2,0,100};
+int max = -99990;
+cout<<maxx(5,max,arr);
+    return 0;
+}
