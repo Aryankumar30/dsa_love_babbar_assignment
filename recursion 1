@@ -107,3 +107,38 @@ int max = -99990;
 cout<<maxx(5,max,arr);
     return 0;
 }
+
+--------------------------------------------------
+
+//expo 
+
+#include <iostream>
+
+using namespace std;
+
+int expo(int n){
+    //base case
+    if(n == 0){
+        return 1;
+    }
+     // reurssion
+    
+    int smallans = expo(n/2);
+    
+    if(n&1){
+        return smallans*smallans*2;
+    }
+    else
+    return smallans*smallans;
+    
+}
+
+int main()
+{
+  int n = 5;
+ 
+cout<<expo(n);
+return 0;
+}
+
+-----------------------------------
