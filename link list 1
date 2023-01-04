@@ -45,6 +45,12 @@ insertathead(head,18);
 insertathead(head,82);
 insertathead(head,83);
 
+
+//
+Node* headd = NULL;
+    Node* head = headd;
+//
+
 traverse(head);
     return 0;
 }
