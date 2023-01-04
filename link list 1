@@ -25,6 +25,17 @@ void insertathead(Node* &head , int d){
     head = newnode;
 }
 
+
+void inserttail(Node* &tail , int d){
+    // create new Node
+    Node * newnode = new Node(d);
+    // set head next to tail 
+    tail->next = newnode;
+    // tail update
+    tail = newnode;
+}
+
+
 void traverse(Node * &head){
     Node * temp = head;
     while(temp != NULL){
@@ -40,12 +51,16 @@ int main()
    //cout<<first->next;
 
 Node *head = first;
+ Node* tail = first;
 insertathead(head,8);
 insertathead(head,18);
 insertathead(head,82);
 insertathead(head,83);
 
 
+inserttail(tail , 5);
+inserttail(tail , 335);
+inserttail(tail , 15);
 //
 Node* headd = NULL;
     Node* head = headd;
@@ -54,3 +69,4 @@ Node* headd = NULL;
 traverse(head);
     return 0;
 }
+
