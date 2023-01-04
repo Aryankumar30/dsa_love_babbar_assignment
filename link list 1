@@ -36,6 +36,36 @@ void inserttail(Node* &tail , int d){
 }
 
 
+void insertatposition(Node* &head, int pos , int d){
+    if(pos == 1){
+        insertathead(head,d);
+    }
+    
+    
+    else{
+        // create new node 
+        Node * newnode = new Node(d);
+        // traverse to previous node 
+        Node * prev = head;
+        int t = pos - 2;
+        while(t--){
+            prev = prev->next;
+        }
+        
+        // connection
+        newnode->next=prev->next;
+        prev->next=newnode;
+        
+        
+        if(newnode->next == NULL){
+           tail = newnode;
+        }
+    }
+}
+
+
+
+
 void traverse(Node * &head){
     Node * temp = head;
     while(temp != NULL){
