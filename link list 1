@@ -97,21 +97,25 @@ int main()
 
 Node *head = first;
  Node* tail = first;
-insertathead(head,8);
-insertathead(head,18);
-insertathead(head,82);
-insertathead(head,83);
+insertathead(head,8,p);
 
 
-inserttail(tail , 5);
-inserttail(tail , 335);
-inserttail(tail , 15);
-//
+
+inserttail(tail , 5,p);
+inserttail(tail , 335,p);
+inserttail(tail , 15,p);
+
+cout<<size<<endl;
+
+
+insertatposition(head,8,555,tail,p);
+
+traverse(head);
 Node* headd = NULL;
     Node* head = headd;
 //
 
-traverse(head);
+
     return 0;
 }
 
