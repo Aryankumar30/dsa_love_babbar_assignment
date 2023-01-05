@@ -18,6 +18,30 @@ class Node{
 
 
 
+void deletenode(Node* &head, int value , int *p){
+    Node *temp = head;
+ 
+    // if 1st node delete
+    
+    if(temp->data == value){
+        head = temp->next;
+        temp->next = NULL;
+        
+        delete temp;
+    }
+    // at other positiojn other than 1 
+    else{
+        while(value = temp->data){
+            
+            temp = temp->next;
+        }
+        
+        temp
+    }
+}
+
+
+
 void insertathead(Node* &head , int d , int*p){
     // creat new node
     Node *newnode = new Node(d);
