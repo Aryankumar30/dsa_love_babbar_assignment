@@ -16,31 +16,44 @@ class Node{
     
 };
 
-void insertathead(Node* &head , int d){
+
+
+void insertathead(Node* &head , int d , int*p){
     // creat new node
     Node *newnode = new Node(d);
     // set next ptr to head Node
     newnode->next = head;
     // head update;
     head = newnode;
+    *p = *p + 1;
+
 }
 
 
-void inserttail(Node* &tail , int d){
+void inserttail(Node* &tail , int d , int*p){
     // create new Node
     Node * newnode = new Node(d);
     // set head next to tail 
     tail->next = newnode;
     // tail update
     tail = newnode;
+     *p = *p + 1;
 }
 
 
-void insertatposition(Node* &head, int pos , int d){
+void insertatposition(Node* &head, int pos , int d , Node* &tail , int *p){
+    
+    
+        if(*p+1 < pos){
+            cout<<"invalid";
+            return;
+        }
     if(pos == 1){
-        insertathead(head,d);
+        insertathead(head,d,p);
     }
     
+   
+        
     
     else{
         // create new node 
@@ -59,7 +72,9 @@ void insertatposition(Node* &head, int pos , int d){
         
         if(newnode->next == NULL){
            tail = newnode;
+           cout<<newnode;
         }
+        
     }
 }
 
