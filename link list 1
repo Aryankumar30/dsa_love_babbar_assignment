@@ -131,6 +131,24 @@ void traverse(Node * &head){
     }
     cout<<endl;
 }
+
+
+Node *getmiddle(Node *head) {
+    Node *slow = head;
+    Node *fast = head;
+    
+    while(fast!= NULL && fast->next != NULL){
+        // 2 step
+        fast = fast->next->next;
+        // 1 step
+        slow = slow->next;
+    }
+    return slow;
+}
+
+
+
+
 int main()
 {
    Node* first = new Node(3);
