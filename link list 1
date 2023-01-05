@@ -94,7 +94,8 @@ int main()
    Node* first = new Node(3);
    //cout<<first->data<<endl;
    //cout<<first->next;
-
+int size = 1;
+int *p = &size;
 Node *head = first;
  Node* tail = first;
 insertathead(head,8,p);
@@ -111,6 +112,7 @@ cout<<size<<endl;
 insertatposition(head,8,555,tail,p);
 
 traverse(head);
+//
 Node* headd = NULL;
     Node* head = headd;
 //
