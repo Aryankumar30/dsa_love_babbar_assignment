@@ -174,3 +174,65 @@ int main()
 
 
 Read about inline function - basically time save krte hai hum 1 line wale function ke liye . just like macro it work .
+
+
+
+
+jagged array dynamiuc
+
+
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{	
+    int n , m ,p;
+  
+ cin>>n>>m;
+ 
+ int **arr = new int*[m];
+ int *arr2 = new int[n];
+ for(int i = 0 ; i < m ; i++){ // for each row we are crsting array
+     arr[i] = new int[n];
+ }
+ 
+ 
+ for(int i = 0 ; i < m ; i++){
+     cout<<"enter value";
+    
+     cin>>p;
+     arr2[i] = p;
+     for(int j = 0 ; j<p;j++){
+         cin>>arr[i][j];
+     }
+ }
+ 
+ cout<<"qanuyfew:";
+ 
+  for(int i = 0 ; i < m ; i++){
+     p = arr2[i] ;
+      
+     for(int j = 0 ; j<p;j++){
+         cout<<arr[i][j];
+     }cout<<endl;
+ }
+ 
+ // deleting 
+ for(int i = 0 ; i < m ; i++){ 
+    delete []arr[i];
+ }
+ 
+ delete []arr;
+
+ 
+  for(int i = 0 ; i < m ; i++){
+     p = arr2[i] ;
+      
+     for(int j = 0 ; j<p;j++){
+         cout<<arr[i][j];
+     }cout<<endl;
+ }
+    return 0;
+}
