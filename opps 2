@@ -173,3 +173,43 @@ cout<<a.age<<" ";
 }
 
 5. Hybrid Inheritance.
+
+
+#include <iostream>
+
+using namespace std;
+
+class human{
+    public:
+    int age;
+   
+};
+
+
+class nothuman{
+    public:
+    int no;
+   
+};
+class student  : public human {
+    public:
+    string name ;
+};
+
+class aryan : public human , public nothuman{
+   
+};
+
+int main()
+{
+  student p;
+ cout<<p.age;
+aryan a;
+a.age = 20;
+a.no = 3;
+
+cout<<a.age;
+cout<<a.no;
+    return 0;
+}
+
