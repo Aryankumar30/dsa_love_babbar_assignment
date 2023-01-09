@@ -104,6 +104,72 @@ cout<<a.age<<" "<<a.name;
 
 3. Multiple inheritance.
 
+
+#include <iostream>
+
+using namespace std;
+
+class human{
+    public:
+    int age;
+    
+};
+
+class student {
+    public:
+    string name ;
+};
+
+class aryan : public student ,public human{
+    
+};
+int main()
+{
+  student p;
+ 
+aryan a;
+a.age = 20;
+a.name = "ankish";
+
+cout<<a.age<<" "<<a.name;
+    return 0;
+}
+
+
+inheritent ambiguity ke bare me padh lena
 4.Hierarchical Inheritance
+
+
+
+
+#include <iostream>
+
+using namespace std;
+
+class human{
+    public:
+    int age;
+   
+};
+
+class student  : public human {
+    public:
+    string name ;
+};
+
+class aryan : public human{
+   
+};
+int main()
+{
+  student p;
+ cout<<p.age;
+aryan a;
+a.age = 20;
+
+
+cout<<a.age<<" ";
+    return 0;
+}
 
 5. Hybrid Inheritance.
