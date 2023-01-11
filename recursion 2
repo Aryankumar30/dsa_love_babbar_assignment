@@ -1,0 +1,73 @@
+
+coin problem use arr[1,2] ans make amount 4 in how many ways
+#include <iostream>
+
+using namespace std;
+
+
+int solve(int coins[] , int size , int amount){
+    // base case
+    
+    if(amount == 0){
+        return 1;
+    }
+    
+    if(amount < 0){
+        return 0;
+    }
+    
+    // recurssion
+    int ways = 0;
+    for(int i = 0 ; i < size ; i ++){
+        ways = ways + solve(coins , size , amount - coins[i]);
+    }
+    
+    return ways;
+}
+int main()
+{
+  int coins[] = {1,2};
+  int size = 2;
+  int amount = 4;
+  
+  int ans = solve(coins,size,amount);
+  cout<<ans;
+
+    return 0;
+}
+-----
+#include <iostream>
+
+using namespace std;
+
+
+int solve(int coins[] , int size , int amount , int currentcoin ){
+    // base case
+    
+    if(amount == 0){
+        return 1;
+    }
+    
+    if(amount < 0){
+        return 0;
+    }
+    
+    // recurssion
+    int ways = 0;
+    for(int i = currentcoin ; i < size ; i ++){
+        ways = ways + solve(coins , size , amount - coins[i] , i);
+    }
+    
+    return ways;
+}
+int main()
+{
+  int coins[] = {1,2};
+  int size = 2;
+  int amount = 4;
+  
+  int ans = solve(coins,size,amount , 0);
+  cout<<ans;
+
+    return 0;
+}
