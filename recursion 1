@@ -253,10 +253,6 @@ int main()
 
 
 
-
-
-
-
 #include <iostream>
 
 using namespace std;
@@ -264,17 +260,18 @@ using namespace std;
 int b_s(int n , int ans){
 //base case 
 
-if(n <1){
+if(n <=1){
     return 1;
 }
 
+b_s(--n,ans);
 ans = ans * n;
- return b_s(n--,ans);
+ return ans;
 }
 int main()
 {
     int n = 5;
-  int ans =0;
+  int ans =1;
   cout<<b_s(n,ans);
 
     return 0;
