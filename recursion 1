@@ -252,27 +252,29 @@ int main()
 
 
 
-
 #include <iostream>
 
 using namespace std;
 
-int b_s(int n , int ans){
+int freq(int n , int ans){
 //base case 
-
+if(n == 0){
+    return 0;
+}
 if(n <=1){
-    return 1;
+    return ans;
 }
 
-b_s(--n,ans);
+
 ans = ans * n;
- return ans;
+
+ return freq(--n,ans);
 }
 int main()
 {
     int n = 5;
   int ans =1;
-  cout<<b_s(n,ans);
+  cout<<freq(n,ans);
 
     return 0;
 }
