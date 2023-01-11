@@ -233,56 +233,19 @@ if(arr[mid] <key){
 if(arr[mid]>key){
    return b_s(arr,start,mid-1,key);
 }
-
+return -1;
 }
 int main()
 {
     int n = 5;
     int arr[] ={1,4,6,18,29};
-    int key=1;
+    int key=29;
     int start=0;
     int end = n-1;
     cout<<b_s(arr,start,end,key);
 
     return 0;
 }
-
-#include <iostream>
-
-using namespace std;
-
-int b_s(int arr[] , int start ,int end ,int key){
-// base case 
-int mid =( start + end)/2;
-if(start > end){
-    return -1;
-}
-if(arr[mid] ==key){
-    return mid;
-}
-//recurssion
-
-if(arr[mid] <key){
-   return b_s(arr,mid+1,end,key);
-}
-
-if(arr[mid]>key){
-   return b_s(arr,start,mid-1,key);
-}
-
-}
-int main()
-{
-    int n = 5;
-    int arr[] ={1,4,6,18,29};
-    int key=1;
-    int start=0;
-    int end = n-1;
-    cout<<b_s(arr,start,end,key);
-
-    return 0;
-}
-
 
 
 --------------------
