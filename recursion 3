@@ -1,0 +1,34 @@
+
+powerset 
+
+#include <iostream>
+
+using namespace std;
+
+void poweset(string input , int index , string output){
+    // base condition
+    if(index == input.length()){
+        cout<<output<<endl;
+        return ;
+    }
+    
+    // exclued
+    poweset(input , index+1,output);
+    
+    // include
+    output.push_back(input[index]);
+    
+    
+    poweset(input,index+1,output);
+}
+int main()
+{
+    string str;
+    cin>>str;
+    
+    string output="";
+    poweset(str,0,output);
+
+    return 0;
+}
+------------------------
