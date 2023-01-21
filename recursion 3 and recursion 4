@@ -32,7 +32,7 @@ int main()
     return 0;
 }
 ------------------------
-
+resursion 4 - divide and concure alsogs ...
 merge sort
 
 #include<iostream>
