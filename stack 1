@@ -22,3 +22,166 @@ st.pop();
 
 --------------------
 
+dynamic 
+
+#include <iostream>
+using namespace std;
+
+class stack{
+    public:
+    
+    int *arr;
+    int top ;
+    int size;
+    int p = 0;
+    stack(int size){
+        arr = new int(size);
+        top = -1;
+        this->size = size;
+    }
+    
+    void push(int data){
+        
+        if(top == size-1){
+            cout<<"stack overflow";
+            return;
+        }
+        p++;
+        top++;
+        arr[top] = data;
+    }
+    
+    void pop(){
+        top--;
+    }
+    
+    int getsize(){
+        return this->p;
+    }
+    
+    bool idempty(){
+        if (top == -1){
+            return true;
+        }
+        else
+        return false;
+    }
+    
+    int topp(){
+        return arr[top];
+    }
+};
+
+
+
+
+int main()
+{
+   stack *st = new stack(5);
+   st->push(36); 
+ st->push(76);
+   st->push(36);
+   
+      
+   
+   cout<<st->getsize()<<"------"<<endl;
+   
+   int p =st->getsize();
+while(p--){
+    cout<<st->topp()<<endl;
+    st->pop();
+}
+    return 0;
+}
+
+
+
+
+-----------------
+
+find middle 
+
+#include<iostream>
+#include<stack>
+using namespace std;
+
+void printMiddle(stack<int>& st, int totalSize) {
+    
+    if( (totalSize/2) + 1 ==  st.size()) {
+        cout << "Middle is " << st.top() << endl;
+        return;
+    }
+
+    //step1
+    int topElement = st.top();
+    st.pop();
+
+    //step2
+    printMiddle(st, totalSize);
+
+
+    //step3
+    st.push(topElement);
+
+}
+
+void insertAtBottom(stack<int> &st, int item) {
+    //base case
+    if(st.empty())
+    {
+        st.push(item);
+        return;
+    }
+
+    //step1
+    int topElement = st.top();
+    st.pop();
+
+    //step2: recursive call
+    insertAtBottom(st, item);
+
+    //step3:
+    st.push(topElement);
+
+}
+
+
+void reverse(stack<int>& st) {
+    //base case
+    if(st.empty())
+        return;
+    
+    //step1:
+    int topElement = st.top();
+    st.pop();
+
+    //step2
+    reverse(st);
+
+    //step3:
+    insertAtBottom(st, topElement);
+}
+
+
+int main() {
+
+    stack<int> st;
+    st.push(4);
+    st.push(6);
+    st.push(8);
+    st.push(10);
+
+    printMiddle(st, st.size());
+
+    insertAtBottom(st, 15);
+    reverse(st);
+
+    while(!st.empty()) {
+        cout << st.top() << endl;
+        st.pop();
+    }
+
+
+
+    return 0;
+}
